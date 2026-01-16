@@ -1,21 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
 #gameboard {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
     justify-content: center;
-    align-items: center;
-    height: 300px;
-    justify-content: center;
+    margin: 20px auto;
 }
 
 .square {
+    border: 2px solid black;
     display: flex;
-    flex-wrap: wrap;
-    float: left;
-    border: 1px solid black;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 30%;
-    text-align: center;
     font-size: 80px;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: #f0f0f0;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#controls input {
+    padding: 5px;
+    margin: 5px;
+}
+
+#controls button {
+    padding: 6px 12px;
+    margin: 5px;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
